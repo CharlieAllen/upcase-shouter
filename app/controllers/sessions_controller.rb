@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  respond_to :html
   skip_before_action :require_login, only: [:new, :create], raise: false
 
   def new
